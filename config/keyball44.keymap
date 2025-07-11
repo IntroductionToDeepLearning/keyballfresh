@@ -199,10 +199,10 @@
         snipe_layer {
             label = "SNIPE";
             bindings = <
-&trans  &trans  &trans  &trans     &trans     &trans              &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &trans              &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans     &trans              &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans                 &trans  &trans                                        &trans
+&kp LG(GRAVE)  &kp HOME    &kp UP       &kp END        &mkp MCLK  &trans              &trans  &trans     &trans     &trans  &trans  &trans
+&trans         &kp LEFT    &kp DOWN     &kp RIGHT      &mkp LCLK  &trans              &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans
+&trans         &kp DELETE  &kp PAGE_UP  &kp PAGE_DOWN  &mkp RCLK  &trans              &trans  &trans     &trans     &trans  &trans  &trans
+&trans         &trans      &trans       &trans         &trans                 &trans  &trans                                        &trans
             >;
         };
 
@@ -239,10 +239,10 @@
         colemak {
             label = "colemak";
             bindings = <
-&kp TAB           &kp Q     &kp W          &kp F         &kp P        &kp B                     &kp J                  &kp L  &kp U      &kp Y    &kp COLON  &minus_plus_tap
-&lt 1 ESCAPE      &kp A     &kp R          &kp S         &kp T        &kp G                     &kp M                  &kp N  &kp E      &kp I    &lt 6 O    &apo_quote_tap
-&kp LEFT_SHIFT    &kp Z     &x_equals_tap  &kp C         &kp D        &kp V                     &kp K                  &kp H  &kp COMMA  &kp DOT  &kp SLASH  &kp UNDER
-&kp LEFT_CONTROL  &alt_tap  &gui_tap       &lt 2 ESCAPE  &lt 1 SPACE             &kp BACKSPACE  &mt RIGHT_SHIFT ENTER                                        &tog 10
+&kp TAB           &kp Q     &kp W          &kp F         &kp P        &kp B                     &kp J                  &kp L  &kp U      &kp Y       &kp COLON  &minus_plus_tap
+&lt 6 ESCAPE      &kp A     &kp R          &kp S         &kp T        &kp G                     &kp M                  &kp N  &kp E      &kp I       &lt 6 O    &apo_quote_tap
+&kp LEFT_SHIFT    &kp Z     &x_equals_tap  &kp C         &kp D        &kp V                     &kp K                  &kp H  &kp COMMA  &kp PERIOD  &kp SLASH  &kp UNDER
+&kp LEFT_CONTROL  &alt_tap  &gui_tap       &lt 2 ESCAPE  &lt 1 SPACE             &kp BACKSPACE  &mt RIGHT_SHIFT ENTER                                           &tog 10
             >;
         };
     };
