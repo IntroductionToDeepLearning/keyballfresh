@@ -13,7 +13,7 @@ layers:
   - O
   - P
   - '&minus_plus_tap'
-  - $$mdi:keyboard-esc$$
+  - {t: '$$mdi:keyboard-esc$$', h: sym_nav}
   - A
   - S
   - D
@@ -23,7 +23,7 @@ layers:
   - J
   - K
   - L
-  - ':'
+  - {t: ':', h: MOUSE}
   - '&apo_quote_tap'
   - $$mdi:apple-keyboard-shift$$
   - Z
@@ -40,8 +40,8 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - '&alt_tap'
   - '&gui_tap'
-  - {t: '$$mdi:keyboard-esc$$', h: sym_nav}
-  - {t: '$$mdi:keyboard-space$$', h: NUM}
+  - {t: '$$mdi:keyboard-esc$$', h: NUM_old}
+  - {t: '$$mdi:keyboard-space$$', h: sym_nav}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
   - $$mdi:backspace-reverse-outline$$
@@ -58,7 +58,7 @@ layers:
   - {t: '`', s: '~'}
   - '|'
   - '&minus_plus_tap'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - '@'
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
@@ -67,7 +67,7 @@ layers:
   - ^
   - (
   - )
-  - '%'
+  - '&'
   - ':'
   - '&apo_quote_tap'
   - {t: '$$mdi:transfer$$', type: trans}
@@ -79,6 +79,51 @@ layers:
   - <
   - '{'
   - '}'
+  - '>'
+  - '?'
+  - _
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  NUM_old:
+  - $$mdi:keyboard-tab$$
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - '*'
+  - (
+  - )
+  - '{'
+  - '}'
+  - '&minus_plus_tap'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - {t: '6', s: ^}
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
+  - {t: '0', s: )}
+  - '&apo_quote_tap'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - +
+  - {t: '=', s: +}
+  - '|'
+  - {t: '`', s: '~'}
+  - '~'
+  - <
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
   - '>'
   - '?'
   - _
@@ -131,7 +176,7 @@ layers:
   - {t: '0', s: )}
   - {t: ., s: '>'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -182,16 +227,16 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   MOUSE:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: Alt+1, s: Alt+!}
-  - {t: Alt+2, s: Alt+@}
-  - {t: Alt+3, s: Alt+#}
-  - {t: Alt+4, s: Alt+$}
-  - {t: Alt+5, s: Alt+%}
-  - Gui+1
-  - Gui+2
-  - Gui+3
-  - Gui+4
-  - {t: Gui+5, s: Gui+%}
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:arrow-left-bold$$
@@ -201,9 +246,9 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - PgUp
   - $$mdi:mouse-left-click-outline$$
-  - $$mdi:mouse-scroll-wheel$$
   - $$mdi:mouse-right-click-outline$$
   - SNIPE
+  - {t: SNIPE, type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -292,7 +337,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -413,6 +458,6 @@ combos:
 - p: [14, 15, 16, 13]
   k: $$mdi:keyboard-esc$$
 - p: [27, 29, 28]
-  k: {t: NUM, h: toggle}
+  k: {t: FUN, h: toggle}
 - p: [9, 10, 11]
   k: Gui+Sft+P
