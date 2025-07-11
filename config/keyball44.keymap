@@ -228,7 +228,7 @@
 &kp TAB           &kp Q     &kp W          &kp F         &kp P        &kp B                     &kp J                  &kp L  &kp U      &kp Y    &kp COLON  &minus_plus_tap
 &kp J             &kp A     &kp R          &kp S         &kp T        &kp J                     &kp M                  &kp N  &kp E      &kp I    &lt 7 O    &apo_quote_tap
 &kp LEFT_SHIFT    &kp Z     &x_equals_tap  &kp C         &kp V        &kp B                     &kp K                  &kp H  &kp COMMA  &kp DOT  &kp SLASH  &kp UNDER
-&kp LEFT_CONTROL  &alt_tap  &gui_tap       &lt 2 ESCAPE  &lt 1 SPACE             &kp BACKSPACE  &mt RIGHT_SHIFT ENTER                                        &tog 0
+&kp LEFT_CONTROL  &alt_tap  &gui_tap       &lt 2 ESCAPE  &lt 1 SPACE             &kp BACKSPACE  &mt RIGHT_SHIFT ENTER                                        &tog 10
             >;
         };
     };
