@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: keyball44}
 layers:
-  QWRT:
+  QWERT:
   - $$mdi:keyboard-tab$$
   - Q
   - W
@@ -13,7 +13,7 @@ layers:
   - O
   - P
   - '&minus_plus_tap'
-  - {t: '$$mdi:keyboard-esc$$', h: sym_nav}
+  - {t: '$$mdi:keyboard-esc$$', h: NAV}
   - A
   - S
   - D
@@ -27,7 +27,7 @@ layers:
   - '&apo_quote_tap'
   - $$mdi:apple-keyboard-shift$$
   - Z
-  - X
+  - '&x_equals_tap'
   - C
   - V
   - B
@@ -40,12 +40,12 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - '&alt_tap'
   - '&gui_tap'
-  - {t: '$$mdi:keyboard-esc$$', h: NUM_old}
-  - {t: '$$mdi:keyboard-space$$', h: sym_nav}
+  - {t: '$$mdi:keyboard-esc$$', h: Num}
+  - {t: '$$mdi:keyboard-space$$', h: NAV}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
   - $$mdi:backspace-reverse-outline$$
-  sym_nav:
+  NAV:
   - $$mdi:keyboard-tab$$
   - '!'
   - HOME
@@ -90,7 +90,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  NUM_old:
+  Num:
   - $$mdi:keyboard-tab$$
   - '!'
   - '@'
@@ -374,18 +374,18 @@ layers:
   - '0'
   - '&minus_plus_tap'
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '-', s: _}
+  - {t: Gui+1, s: Gui+!}
+  - {t: Gui+2, s: Gui+@}
+  - {t: Gui+3, s: Gui+#}
   - {t: Gui+4, s: Gui+$}
   - {t: Gui+5, s: Gui+%}
   - {t: Gui+6, s: Gui+^}
-  - +
-  - {t: '-', s: _}
-  - (
-  - )
-  - '%'
-  - ':'
-  - '&apo_quote_tap'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: Gui+7, s: Gui+&}
+  - {t: Gui+8, s: Gui+*}
+  - {t: Gui+9, s: Gui+(}
+  - {t: Gui+0, s: Gui+)}
+  - J
+  - J
   - Gui+0
   - {t: Gui+1, s: Gui+!}
   - {t: Gui+2, s: Gui+@}
@@ -419,16 +419,16 @@ layers:
   - '0'
   - '&minus_plus_tap'
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '-', s: _}
+  - {t: Alt+1, s: Alt+!}
+  - {t: Alt+2, s: Alt+@}
+  - {t: Alt+3, s: Alt+#}
   - {t: Alt+4, s: Alt+$}
   - {t: Alt+5, s: Alt+%}
   - {t: Alt+6, s: Alt+^}
-  - +
-  - {t: '-', s: _}
-  - (
-  - )
-  - '%'
-  - ':'
+  - {t: Alt+7, s: Alt+&}
+  - {t: Alt+8, s: Alt+*}
+  - {t: Alt+9, s: Alt+(}
+  - {t: Alt+0, s: Alt+)}
   - '&apo_quote_tap'
   - {t: '$$mdi:transfer$$', type: trans}
   - Alt+0
@@ -450,6 +450,51 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  colemak:
+  - $$mdi:keyboard-tab$$
+  - Q
+  - W
+  - F
+  - P
+  - B
+  - J
+  - L
+  - U
+  - Y
+  - ':'
+  - '&minus_plus_tap'
+  - J
+  - A
+  - R
+  - S
+  - T
+  - J
+  - M
+  - N
+  - E
+  - I
+  - O
+  - '&apo_quote_tap'
+  - $$mdi:apple-keyboard-shift$$
+  - Z
+  - '&x_equals_tap'
+  - C
+  - V
+  - B
+  - K
+  - H
+  - {t: ',', s: <}
+  - {t: ., s: '>'}
+  - {t: /, s: '?'}
+  - _
+  - $$mdi:apple-keyboard-control$$
+  - '&alt_tap'
+  - '&gui_tap'
+  - {t: '$$mdi:keyboard-esc$$', h: Num}
+  - {t: '$$mdi:keyboard-space$$', h: NAV}
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - $$mdi:backspace-reverse-outline$$
 combos:
 - p: [33, 32]
   k: {t: ;, s: ':'}
