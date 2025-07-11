@@ -23,7 +23,7 @@ layers:
   - J
   - K
   - L
-  - {t: ':', h: MOUSE}
+  - {t: ':', h: SNIPE}
   - '&apo_quote_tap'
   - $$mdi:apple-keyboard-shift$$
   - Z
@@ -248,7 +248,7 @@ layers:
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:mouse-right-click-outline$$
   - SNIPE
-  - {t: SNIPE, type: held}
+  - SNIPE
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -337,7 +337,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {type: held alternate}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -473,7 +473,7 @@ layers:
   - N
   - E
   - I
-  - O
+  - {t: O, h: SNIPE}
   - '&apo_quote_tap'
   - $$mdi:apple-keyboard-shift$$
   - Z
