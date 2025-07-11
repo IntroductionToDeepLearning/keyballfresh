@@ -75,7 +75,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "GUI_TAP";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI>, <&sl 8>;
+            bindings = <&kp LEFT_GUI>, <&sl 7>;
 
             tapping-term-ms = <250>;
         };
@@ -84,7 +84,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "ALT_TAP";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT>, <&sl 9>;
+            bindings = <&kp LEFT_ALT>, <&sl 8>;
 
             tapping-term-ms = <250>;
         };
@@ -99,7 +99,7 @@
         };
 
         scroll {
-            bindings = <&mo 6>;
+            bindings = <&mo 5>;
             key-positions = <19 20 21>;
         };
 
@@ -109,7 +109,7 @@
         };
 
         numlock {
-            bindings = <&tog 4>;
+            bindings = <&tog 3>;
             key-positions = <27 29 28>;
         };
 
@@ -126,8 +126,8 @@
             label = "QWERTY";
             bindings = <
 &kp TAB           &kp Q     &kp W          &kp E         &kp R        &kp T                     &kp Y                  &kp U  &kp I      &kp O    &kp P        &minus_plus_tap
-&lt 1 ESCAPE      &kp A     &kp S          &kp D         &kp F        &kp G                     &kp H                  &kp J  &kp K      &kp L    &lt 7 COLON  &apo_quote_tap
-&kp LEFT_SHIFT    &kp Z     &x_equals_tap  &kp C         &kp V        &kp B                     &kp N                  &kp M  &kp COMMA  &kp DOT  &kp SLASH    &kp UNDER
+&lt 1 ESCAPE      &kp A     &kp S          &kp D         &kp F        &kp G                     &kp H                  &kp J  &kp K      &kp L    &lt 6 COLON  &apo_quote_tap
+&kp LEFT_SHIFT    &kp Z     &x_equals_tap  &kp C         &kp V        &kp B                     &kp N                  &kp M  &kp COMMA  &kp DOT  &lt 5 SLASH  &kp UNDER
 &kp LEFT_CONTROL  &alt_tap  &gui_tap       &lt 2 ESCAPE  &lt 1 SPACE             &kp BACKSPACE  &mt RIGHT_SHIFT ENTER                                          &tog 10
             >;
         };
@@ -152,23 +152,13 @@
             >;
         };
 
-        numerical {
-            label = "NUM";
-            bindings = <
-&kp TAB    &kp SLASH     &kp N7   &kp N8  &kp N9  &kp ASTERISK              &kp ASTERISK   &kp LBKT              &kp RBKT               &kp GRAVE         &kp PIPE   &minus_plus_tap
-&trans     &kp MINUS     &kp N4   &kp N5  &kp N6  &kp PLUS                  &kp MINUS      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PERCENT       &kp COLON  &apo_quote_tap
-&trans     &kp NUMBER_0  &kp N1   &kp N2  &kp N3  &kp EQUAL                 &kp LESS_THAN  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GREATER_THAN  &kp QMARK  &kp UNDER
-&kp COMMA  &kp N0        &kp DOT  &trans  &trans                    &trans  &trans                                                                                   &trans
-            >;
-        };
-
         function_layer {
             label = "FUN";
             bindings = <
 &none   &kp BSPC  &kp F7  &kp F8  &kp F9  &kp F10              &none  &none  &none  &none  &none  &none
 &none   &kp BSPC  &kp F4  &kp F5  &kp F6  &kp F11              &none  &none  &none  &none  &none  &none
 &none   &kp BSPC  &kp F1  &kp F2  &kp F3  &kp F12              &none  &none  &none  &none  &none  &none
-&trans  &trans    &trans  &trans  &trans               &trans  &mo 4                              &trans
+&trans  &trans    &trans  &trans  &trans               &trans  &mo 3                              &trans
             >;
         };
 
@@ -176,7 +166,7 @@
             label = "MOUSE";
             bindings = <
 &none   &kp Q           &kp W           &kp E         &kp R      &kp T              &kp Y          &kp U      &kp I      &kp O  &kp P  &none
-&none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &none              &kp PAGE_UP    &mkp LCLK  &mkp RCLK  &mo 7  &mo 7  &none
+&none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &none              &kp PAGE_UP    &mkp LCLK  &mkp RCLK  &mo 5  &mo 6  &none
 &none   &none           &none           &none         &none      &none              &kp PAGE_DOWN  &none      &none      &none  &none  &none
 &trans  &trans          &trans          &trans        &trans                &trans  &trans                                             &none
             >;
@@ -185,20 +175,20 @@
         scroll_layer {
             label = "SCROLL";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans              &trans  &trans                                  &trans
+&trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans              &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans              &trans  &trans                                        &trans
             >;
         };
 
         snipe_layer {
             label = "SNIPE";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans              &trans  &trans                                  &trans
+&trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans              &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans              &trans  &trans                                        &trans
             >;
         };
 
@@ -222,11 +212,21 @@
             >;
         };
 
+        numerical {
+            label = "NUM";
+            bindings = <
+&kp TAB    &kp SLASH     &kp N7   &kp N8  &kp N9  &kp ASTERISK              &kp ASTERISK   &kp LBKT              &kp RBKT               &kp GRAVE         &kp PIPE   &minus_plus_tap
+&trans     &kp MINUS     &kp N4   &kp N5  &kp N6  &kp PLUS                  &kp MINUS      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PERCENT       &kp COLON  &apo_quote_tap
+&trans     &kp NUMBER_0  &kp N1   &kp N2  &kp N3  &kp EQUAL                 &kp LESS_THAN  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GREATER_THAN  &kp QMARK  &kp UNDER
+&kp COMMA  &kp N0        &kp DOT  &trans  &trans                    &trans  &trans                                                                                   &trans
+            >;
+        };
+
         colemak {
             label = "colemak";
             bindings = <
 &kp TAB           &kp Q     &kp W          &kp F         &kp P        &kp B                     &kp J                  &kp L  &kp U      &kp Y    &kp COLON  &minus_plus_tap
-&lt 1 ESCAPE      &kp A     &kp R          &kp S         &kp T        &kp J                     &kp M                  &kp N  &kp E      &kp I    &lt 7 O    &apo_quote_tap
+&lt 1 ESCAPE      &kp A     &kp R          &kp S         &kp T        &kp J                     &kp M                  &kp N  &kp E      &kp I    &lt 6 O    &apo_quote_tap
 &kp LEFT_SHIFT    &kp Z     &x_equals_tap  &kp C         &kp D        &kp V                     &kp K                  &kp H  &kp COMMA  &kp DOT  &kp SLASH  &kp UNDER
 &kp LEFT_CONTROL  &alt_tap  &gui_tap       &lt 2 ESCAPE  &lt 1 SPACE             &kp BACKSPACE  &mt RIGHT_SHIFT ENTER                                        &tog 10
             >;
