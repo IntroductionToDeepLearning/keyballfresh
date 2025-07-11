@@ -494,7 +494,7 @@ layers:
   - {t: '$$mdi:keyboard-space$$', h: NAV}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: QWERTY, h: toggle}
+  - {t: colemak, h: toggle}
 combos:
 - p: [33, 32]
   k: {t: ;, s: ':'}
