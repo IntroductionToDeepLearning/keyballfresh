@@ -123,17 +123,17 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            label = "QWRT";
+            label = "QWERT";
             bindings = <
-&kp TAB           &kp Q     &kp W     &kp E         &kp R        &kp T                     &kp Y                  &kp U  &kp I      &kp O    &kp P        &minus_plus_tap
-&lt 1 ESCAPE      &kp A     &kp S     &kp D         &kp F        &kp G                     &kp H                  &kp J  &kp K      &kp L    &lt 5 COLON  &apo_quote_tap
-&kp LEFT_SHIFT    &kp Z     &kp X     &kp C         &kp V        &kp B                     &kp N                  &kp M  &kp COMMA  &kp DOT  &kp SLASH    &kp UNDER
-&kp LEFT_CONTROL  &alt_tap  &gui_tap  &lt 2 ESCAPE  &lt 1 SPACE             &kp BACKSPACE  &mt RIGHT_SHIFT ENTER                                          &kp DELETE
+&kp TAB           &kp Q     &kp W          &kp E         &kp R        &kp T                     &kp Y                  &kp U  &kp I      &kp O    &kp P        &minus_plus_tap
+&lt 1 ESCAPE      &kp A     &kp S          &kp D         &kp F        &kp G                     &kp H                  &kp J  &kp K      &kp L    &lt 5 COLON  &apo_quote_tap
+&kp LEFT_SHIFT    &kp Z     &x_equals_tap  &kp C         &kp V        &kp B                     &kp N                  &kp M  &kp COMMA  &kp DOT  &kp SLASH    &kp UNDER
+&kp LEFT_CONTROL  &alt_tap  &gui_tap       &lt 2 ESCAPE  &lt 1 SPACE             &kp BACKSPACE  &mt RIGHT_SHIFT ENTER                                          &kp DELETE
             >;
         };
 
         symbol_nav {
-            label = "sym_nav";
+            label = "NAV";
             bindings = <
 &kp TAB  &kp EXCL  &kp HOME   &kp UP          &kp END    &kp DOLLAR              &kp ASTERISK   &kp LBKT              &kp RBKT               &kp GRAVE         &kp PIPE   &minus_plus_tap
 &trans   &kp AT    &kp LEFT   &kp DOWN_ARROW  &kp RIGHT  &kp HASH                &kp CARET      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPS          &kp COLON  &apo_quote_tap
@@ -143,7 +143,7 @@
         };
 
         num_homerow {
-            label = "NUM_old";
+            label = "Num";
             bindings = <
 &kp TAB  &kp EXCL  &kp AT     &kp HASH  &kp DOLLAR  &kp PERCENT              &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE    &kp RIGHT_BRACE  &minus_plus_tap
 &trans   &kp N1    &kp N2     &kp N3    &kp N4      &kp N5                   &kp N6         &kp N7                &kp N8                 &kp N9            &kp N0           &apo_quote_tap
@@ -205,20 +205,30 @@
         numgui {
             label = "NUMgui";
             bindings = <
-&kp TAB    &kp SLASH         &kp LG(N7)  &kp LG(N8)  &kp LG(N9)  &kp ASTERISK              &kp ASTERISK   &kp LBKT              &kp RBKT               &kp NUMBER_9      &kp NUMBER_0  &minus_plus_tap
-&trans     &kp MINUS         &kp LG(N4)  &kp LG(N5)  &kp LG(N6)  &kp PLUS                  &kp MINUS      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PERCENT       &kp COLON     &apo_quote_tap
-&trans     &kp LG(NUMBER_0)  &kp LG(N1)  &kp LG(N2)  &kp LG(N3)  &kp EQUAL                 &kp LESS_THAN  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GREATER_THAN  &kp QMARK     &kp UNDER
-&kp COMMA  &kp LG(N0)        &kp DOT     &trans      &trans                        &trans  &trans                                                                                      &trans
+&kp TAB    &kp SLASH         &kp LG(N7)  &kp LG(N8)  &kp LG(N9)  &kp ASTERISK              &kp ASTERISK   &kp LBKT        &kp RBKT         &kp NUMBER_9      &kp NUMBER_0  &minus_plus_tap
+&trans     &kp LG(N1)        &kp LG(N2)  &kp LG(N3)  &kp LG(N4)  &kp LG(N5)                &kp LG(N6)     &kp LG(N7)      &kp LG(N8)       &kp LG(N9)        &kp LG(N0)    &kp J
+&kp J      &kp LG(NUMBER_0)  &kp LG(N1)  &kp LG(N2)  &kp LG(N3)  &kp EQUAL                 &kp LESS_THAN  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp GREATER_THAN  &kp QMARK     &kp UNDER
+&kp COMMA  &kp LG(N0)        &kp DOT     &trans      &trans                        &trans  &trans                                                                          &trans
             >;
         };
 
         numalt {
             label = "NUMalt";
             bindings = <
-&kp TAB    &kp SLASH         &kp LA(N7)  &kp LA(N8)  &kp LA(N9)  &kp ASTERISK              &kp ASTERISK   &kp LBKT              &kp RBKT               &kp NUMBER_9      &kp NUMBER_0  &minus_plus_tap
-&trans     &kp MINUS         &kp LA(N4)  &kp LA(N5)  &kp LA(N6)  &kp PLUS                  &kp MINUS      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PERCENT       &kp COLON     &apo_quote_tap
-&trans     &kp LA(NUMBER_0)  &kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &kp EQUAL                 &kp LESS_THAN  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GREATER_THAN  &kp QMARK     &kp UNDER
-&kp COMMA  &kp LA(N0)        &kp DOT     &trans      &trans                        &trans  &trans                                                                                      &trans
+&kp TAB    &kp SLASH         &kp LA(N7)  &kp LA(N8)  &kp LA(N9)  &kp ASTERISK              &kp ASTERISK   &kp LBKT        &kp RBKT         &kp NUMBER_9      &kp NUMBER_0  &minus_plus_tap
+&trans     &kp LA(N1)        &kp LA(N2)  &kp LA(N3)  &kp LA(N4)  &kp LA(N5)                &kp LA(N6)     &kp LA(N7)      &kp LA(N8)       &kp LA(N9)        &kp LA(N0)    &apo_quote_tap
+&trans     &kp LA(NUMBER_0)  &kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &kp EQUAL                 &kp LESS_THAN  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp GREATER_THAN  &kp QMARK     &kp UNDER
+&kp COMMA  &kp LA(N0)        &kp DOT     &trans      &trans                        &trans  &trans                                                                          &trans
+            >;
+        };
+
+        colemak {
+            label = "colemak";
+            bindings = <
+&kp TAB           &kp Q     &kp W          &kp F         &kp P        &kp B                     &kp J                  &kp L  &kp U      &kp Y    &kp COLON  &minus_plus_tap
+&kp J             &kp A     &kp R          &kp S         &kp T        &kp J                     &kp M                  &kp N  &kp E      &kp I    &kp O      &apo_quote_tap
+&kp LEFT_SHIFT    &kp Z     &x_equals_tap  &kp C         &kp V        &kp B                     &kp K                  &kp H  &kp COMMA  &kp DOT  &kp SLASH  &kp UNDER
+&kp LEFT_CONTROL  &alt_tap  &gui_tap       &lt 2 ESCAPE  &lt 1 SPACE             &kp BACKSPACE  &mt RIGHT_SHIFT ENTER                                        &kp DELETE
             >;
         };
     };
