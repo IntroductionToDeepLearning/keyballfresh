@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: keyball44}
 layers:
-  QWERT:
+  QWERTY:
   - $$mdi:keyboard-tab$$
   - Q
   - W
@@ -44,7 +44,7 @@ layers:
   - {t: '$$mdi:keyboard-space$$', h: NAV}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - $$mdi:backspace-reverse-outline$$
+  - {t: colemak, h: toggle}
   NAV:
   - $$mdi:keyboard-tab$$
   - '!'
@@ -494,7 +494,7 @@ layers:
   - {t: '$$mdi:keyboard-space$$', h: NAV}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - $$mdi:backspace-reverse-outline$$
+  - {t: QWERTY, h: toggle}
 combos:
 - p: [33, 32]
   k: {t: ;, s: ':'}
