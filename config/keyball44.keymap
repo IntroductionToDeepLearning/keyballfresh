@@ -123,12 +123,12 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            label = "QWERT";
+            label = "QWERTY";
             bindings = <
 &kp TAB           &kp Q     &kp W          &kp E         &kp R        &kp T                     &kp Y                  &kp U  &kp I      &kp O    &kp P        &minus_plus_tap
 &lt 1 ESCAPE      &kp A     &kp S          &kp D         &kp F        &kp G                     &kp H                  &kp J  &kp K      &kp L    &lt 5 COLON  &apo_quote_tap
 &kp LEFT_SHIFT    &kp Z     &x_equals_tap  &kp C         &kp V        &kp B                     &kp N                  &kp M  &kp COMMA  &kp DOT  &kp SLASH    &kp UNDER
-&kp LEFT_CONTROL  &alt_tap  &gui_tap       &lt 2 ESCAPE  &lt 1 SPACE             &kp BACKSPACE  &mt RIGHT_SHIFT ENTER                                          &kp DELETE
+&kp LEFT_CONTROL  &alt_tap  &gui_tap       &lt 2 ESCAPE  &lt 1 SPACE             &kp BACKSPACE  &mt RIGHT_SHIFT ENTER                                          &tog 10
             >;
         };
 
@@ -228,7 +228,7 @@
 &kp TAB           &kp Q     &kp W          &kp F         &kp P        &kp B                     &kp J                  &kp L  &kp U      &kp Y    &kp COLON  &minus_plus_tap
 &kp J             &kp A     &kp R          &kp S         &kp T        &kp J                     &kp M                  &kp N  &kp E      &kp I    &kp O      &apo_quote_tap
 &kp LEFT_SHIFT    &kp Z     &x_equals_tap  &kp C         &kp V        &kp B                     &kp K                  &kp H  &kp COMMA  &kp DOT  &kp SLASH  &kp UNDER
-&kp LEFT_CONTROL  &alt_tap  &gui_tap       &lt 2 ESCAPE  &lt 1 SPACE             &kp BACKSPACE  &mt RIGHT_SHIFT ENTER                                        &kp DELETE
+&kp LEFT_CONTROL  &alt_tap  &gui_tap       &lt 2 ESCAPE  &lt 1 SPACE             &kp BACKSPACE  &mt RIGHT_SHIFT ENTER                                        &tog 0
             >;
         };
     };
