@@ -88,6 +88,15 @@
 
             tapping-term-ms = <250>;
         };
+
+        hold_preferred: hold_preferred {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_PREFERRED";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+        };
     };
 
     combos {
@@ -117,6 +126,11 @@
             bindings = <&kp LG(LS(P))>;
             key-positions = <9 10 11>;
         };
+
+        scroll_l {
+            bindings = <&mo 5>;
+            key-positions = <16 14 15>;
+        };
     };
 
     keymap {
@@ -125,10 +139,10 @@
         default_layer {
             label = "QWERTY";
             bindings = <
-&kp TAB           &kp Q     &kp W          &kp E         &kp R        &kp T                     &kp Y                  &kp U  &kp I      &kp O    &kp P        &minus_plus_tap
-&lt 1 ESCAPE      &kp A     &kp S          &kp D         &kp F        &kp G                     &kp H                  &kp J  &kp K      &kp L    &lt 6 COLON  &apo_quote_tap
-&kp LEFT_SHIFT    &kp Z     &x_equals_tap  &kp C         &kp V        &kp B                     &kp N                  &kp M  &kp COMMA  &kp DOT  &lt 5 SLASH  &kp UNDER
-&kp LEFT_CONTROL  &alt_tap  &gui_tap       &lt 2 ESCAPE  &lt 1 SPACE             &kp BACKSPACE  &mt RIGHT_SHIFT ENTER                                          &tog 10
+&kp TAB                   &kp Q     &kp W          &kp E         &kp R        &kp T                     &kp Y                  &kp U  &kp I      &kp O    &kp P        &minus_plus_tap
+&hold_preferred 6 ESCAPE  &kp A     &kp S          &kp D         &kp F        &kp G                     &kp H                  &kp J  &kp K      &kp L    &lt 6 COLON  &apo_quote_tap
+&kp LEFT_SHIFT            &kp Z     &x_equals_tap  &kp C         &kp V        &kp B                     &kp N                  &kp M  &kp COMMA  &kp DOT  &lt 5 SLASH  &kp UNDER
+&kp LEFT_CONTROL          &alt_tap  &gui_tap       &lt 2 ESCAPE  &lt 1 SPACE             &kp BACKSPACE  &mt RIGHT_SHIFT ENTER                                          &tog 10
             >;
         };
 
@@ -185,10 +199,10 @@
         snipe_layer {
             label = "SNIPE";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans              &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans              &trans  &trans                                        &trans
+&trans  &trans  &trans  &trans     &trans     &trans              &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &trans              &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans     &trans              &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans                 &trans  &trans                                        &trans
             >;
         };
 
@@ -226,7 +240,7 @@
             label = "colemak";
             bindings = <
 &kp TAB           &kp Q     &kp W          &kp F         &kp P        &kp B                     &kp J                  &kp L  &kp U      &kp Y    &kp COLON  &minus_plus_tap
-&lt 1 ESCAPE      &kp A     &kp R          &kp S         &kp T        &kp J                     &kp M                  &kp N  &kp E      &kp I    &lt 6 O    &apo_quote_tap
+&lt 1 ESCAPE      &kp A     &kp R          &kp S         &kp T        &kp G                     &kp M                  &kp N  &kp E      &kp I    &lt 6 O    &apo_quote_tap
 &kp LEFT_SHIFT    &kp Z     &x_equals_tap  &kp C         &kp D        &kp V                     &kp K                  &kp H  &kp COMMA  &kp DOT  &kp SLASH  &kp UNDER
 &kp LEFT_CONTROL  &alt_tap  &gui_tap       &lt 2 ESCAPE  &lt 1 SPACE             &kp BACKSPACE  &mt RIGHT_SHIFT ENTER                                        &tog 10
             >;
