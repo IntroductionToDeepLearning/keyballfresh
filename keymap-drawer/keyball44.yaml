@@ -461,7 +461,7 @@ layers:
   - L
   - U
   - Y
-  - ':'
+  - 'Sft+:'
   - '&minus_plus_tap'
   - {t: '$$mdi:keyboard-esc$$', h: SNIPE}
   - A
@@ -484,8 +484,8 @@ layers:
   - K
   - H
   - {t: ',', s: <}
-  - .
-  - {t: /, s: '?'}
+  - {t: ., s: '>'}
+  - {t: /, h: SCROLL, s: '?'}
   - _
   - $$mdi:apple-keyboard-control$$
   - '&alt_tap'
