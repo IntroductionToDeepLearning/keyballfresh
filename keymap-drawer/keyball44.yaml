@@ -132,7 +132,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:transfer$$', type: trans}
   FUN:
@@ -275,8 +275,8 @@ layers:
   - HOME
   - $$mdi:arrow-up-bold$$
   - END
-  - '&mkp MB4'
-  - '&mkp MB5'
+  - Ctl+Sft+$$mdi:keyboard-tab$$
+  - Ctl+$$mdi:keyboard-tab$$
   - {t: '$$mdi:transfer$$', type: trans}
   - Ctl+Sft+$$mdi:keyboard-tab$$
   - Ctl+$$mdi:keyboard-tab$$
@@ -299,8 +299,8 @@ layers:
   - $$mdi:backspace-reverse-outline$$
   - PgUp
   - PgDn
-  - Sft+Ctl+$$mdi:keyboard-tab$$
-  - Ctl+$$mdi:keyboard-tab$$
+  - '&mkp MB4'
+  - '&mkp MB5'
   - {t: '$$mdi:transfer$$', type: trans}
   - '&mkp MB4'
   - '&mkp MB5'
@@ -312,7 +312,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - FUN
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: 'Alt+$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   NUMgui:
