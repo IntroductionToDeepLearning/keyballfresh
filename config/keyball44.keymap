@@ -97,6 +97,17 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
         };
+
+        balanced_modtap: balanced_modtap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BALANCED_MODTAP";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            require-prior-idle-ms = <50>;
+            flavor = "balanced";
+        };
     };
 
     combos {
@@ -114,11 +125,13 @@
 
         esc {
             bindings = <&kp ESCAPE>;
-            key-positions = <14 15 16 13>;
+            key-positions = <15 16>;
+            timeout-ms = <150>;
+            require-prior-idle-ms = <50>;
         };
 
         numlock {
-            bindings = <&tog 3>;
+            bindings = <&tog 4>;
             key-positions = <27 29 28>;
         };
 
@@ -131,6 +144,16 @@
             bindings = <&mo 5>;
             key-positions = <16 14 15>;
         };
+
+        caps {
+            bindings = <&kp CAPS>;
+            key-positions = <7 8 9>;
+        };
+
+        console {
+            bindings = <&kp LG(GRAVE)>;
+            key-positions = <0 1>;
+        };
     };
 
     keymap {
@@ -142,7 +165,17 @@
 &kp TAB                   &kp Q     &kp W          &kp E                     &kp R        &kp T                     &kp Y                  &kp U  &kp I      &kp O    &kp P                    &minus_plus_tap
 &hold_preferred 6 ESCAPE  &kp A     &kp S          &kp D                     &kp F        &kp G                     &kp H                  &kp J  &kp K      &kp L    &hold_preferred 6 COLON  &apo_quote_tap
 &kp LEFT_SHIFT            &kp Z     &x_equals_tap  &kp C                     &kp V        &kp B                     &kp N                  &kp M  &kp COMMA  &kp DOT  &lt 5 SLASH              &kp UNDER
-&kp LEFT_CONTROL          &alt_tap  &gui_tap       &hold_preferred 2 ESCAPE  &lt 1 SPACE             &kp BACKSPACE  &mt RIGHT_SHIFT ENTER                                                      &tog 10
+&kp LEFT_CONTROL          &alt_tap  &gui_tap       &hold_preferred 3 ESCAPE  &lt 2 SPACE             &kp BACKSPACE  &mt RIGHT_SHIFT ENTER                                                      &tog 1
+            >;
+        };
+
+        colemak {
+            label = "colemak";
+            bindings = <
+&trans  &kp Q   &kp W          &kp F   &kp P   &kp B              &kp J   &kp L  &kp U      &kp Y    &kp LS(COLON)         &minus_plus_tap
+&trans  &kp A   &kp R          &kp S   &kp T   &kp G              &kp M   &kp N  &kp E      &kp I    &balanced_modtap 6 O  &apo_quote_tap
+&trans  &kp Z   &x_equals_tap  &kp C   &kp D   &kp V              &kp K   &kp H  &kp COMMA  &kp DOT  &lt 5 SLASH           &kp UNDER
+&trans  &trans  &trans         &trans  &trans             &trans  &trans                                                   &tog 1
             >;
         };
 
@@ -150,7 +183,7 @@
             label = "NAV";
             bindings = <
 &kp TAB  &kp EXCL   &kp HOME   &kp UP          &kp END    &mkp MCLK              &kp ASTERISK   &kp LBKT              &kp RBKT               &kp GRAVE         &kp PIPE   &minus_plus_tap
-&mo 3    &mkp RCLK  &kp LEFT   &kp DOWN_ARROW  &kp RIGHT  &mkp LCLK              &kp CARET      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPS          &kp COLON  &apo_quote_tap
+&mo 4    &mkp RCLK  &kp LEFT   &kp DOWN_ARROW  &kp RIGHT  &mkp LCLK              &kp CARET      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPS          &kp COLON  &apo_quote_tap
 &trans   &kp DEL    &kp EQUAL  &kp PG_UP       &kp PG_DN  &kp TILDE              &kp LESS_THAN  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GREATER_THAN  &kp QMARK  &kp UNDER
 &trans   &trans     &trans     &trans          &trans                    &trans  &kp SPACE                                                                                &trans
             >;
@@ -159,10 +192,10 @@
         num_homerow {
             label = "Num";
             bindings = <
-&kp TAB  &kp EXCL  &kp AT     &kp HASH  &kp DOLLAR  &kp PERCENT                     &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE    &kp RIGHT_BRACE  &minus_plus_tap
-&mo 3    &kp N1    &kp N2     &kp N3    &kp N4      &kp N5                          &kp N6         &kp N7                &kp N8                 &kp N9            &kp N0           &apo_quote_tap
-&trans   &kp PLUS  &kp EQUAL  &kp PIPE  &kp GRAVE   &kp TILDE                       &kp LESS_THAN  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GREATER_THAN  &kp QMARK        &kp UNDER
-&trans   &trans    &trans     &trans    &trans                       &kp BACKSPACE  &kp SPACE                                                                                      &trans
+&kp TAB  &kp EXCL  &kp AT     &kp HASH       &kp DOLLAR  &kp PERCENT                     &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE    &kp RIGHT_BRACE  &minus_plus_tap
+&mo 4    &kp N1    &kp N2     &kp N3         &kp N4      &kp N5                          &kp N6         &kp N7                &kp N8                 &kp N9            &kp N0           &apo_quote_tap
+&trans   &kp PLUS  &kp EQUAL  &kp BACKSLASH  &kp GRAVE   &kp TILDE                       &kp LESS_THAN  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GREATER_THAN  &kp QMARK        &kp UNDER
+&trans   &trans    &trans     &trans         &trans                       &kp BACKSPACE  &kp SPACE                                                                                      &trans
             >;
         };
 
@@ -172,17 +205,7 @@
 &none   &kp BSPC  &kp C_REWIND  &kp C_VOL_UP  &kp C_FAST_FORWARD  &kp F10              &none  &none  &none  &none  &none  &none
 &trans  &kp BSPC  &kp K_PREV    &kp C_VOL_DN  &kp K_NEXT          &kp F11              &none  &none  &none  &none  &none  &none
 &none   &kp BSPC  &kp F1        &kp F2        &kp C_STOP          &kp F12              &none  &none  &none  &none  &none  &none
-&trans  &trans    &trans        &trans        &trans                           &trans  &mo 3                              &trans
-            >;
-        };
-
-        mouse_layer {
-            label = "MOUSE";
-            bindings = <
-&none   &kp Q           &kp W           &kp E         &kp R      &kp T              &kp Y          &kp U      &kp I      &kp O  &kp P  &none
-&trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &none              &kp PAGE_UP    &mkp LCLK  &mkp RCLK  &mo 5  &mo 6  &none
-&none   &none           &none           &none         &none      &none              &kp PAGE_DOWN  &none      &none      &none  &none  &none
-&trans  &trans          &trans          &trans        &trans                &trans  &trans                                             &none
+&trans  &trans    &trans        &trans        &trans                           &trans  &mo 4                              &trans
             >;
         };
 
@@ -201,8 +224,8 @@
             bindings = <
 &kp LG(GRAVE)  &kp HOME    &kp UP       &kp END        &kp LC(LS(TAB))  &kp LC(TAB)                         &trans     &kp LC(LS(TAB))  &kp LC(TAB)  &trans  &trans  &trans
 &trans         &kp LEFT    &kp DOWN     &kp RIGHT      &mkp LCLK        &mkp RCLK                           &mkp MCLK  &mkp LCLK        &mkp RCLK    &trans  &trans  &trans
-&trans         &kp DELETE  &kp PAGE_UP  &kp PAGE_DOWN  &mkp MB4         &mkp MB5                            &trans     &mkp MB4         &mkp MB5     &trans  &trans  &trans
-&trans         &trans      &trans       &trans         &mo 3                             &kp LA(BACKSPACE)  &trans                                                   &trans
+&trans         &kp DELETE  &kp PAGE_UP  &kp PAGE_DOWN  &mkp MCLK        &mkp MB4                            &trans     &mkp MB4         &mkp MB5     &trans  &trans  &trans
+&trans         &trans      &trans       &trans         &mo 4                             &kp LA(BACKSPACE)  &trans                                                   &trans
             >;
         };
 
@@ -226,6 +249,16 @@
             >;
         };
 
+        mouse_layer {
+            label = "MOUSE";
+            bindings = <
+&none   &kp Q           &kp W           &kp E         &kp R      &kp T              &kp Y          &kp U      &kp I      &kp O  &kp P  &none
+&trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &none              &kp PAGE_UP    &mkp LCLK  &mkp RCLK  &mo 5  &mo 6  &none
+&none   &none           &none           &none         &none      &none              &kp PAGE_DOWN  &none      &none      &none  &none  &none
+&trans  &trans          &trans          &trans        &trans                &trans  &trans                                             &none
+            >;
+        };
+
         numerical {
             label = "NUM";
             bindings = <
@@ -233,16 +266,6 @@
 &trans     &kp MINUS     &kp N4   &kp N5  &kp N6  &kp PLUS                  &kp MINUS      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PERCENT       &kp COLON  &apo_quote_tap
 &trans     &kp NUMBER_0  &kp N1   &kp N2  &kp N3  &kp EQUAL                 &kp LESS_THAN  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GREATER_THAN  &kp QMARK  &kp UNDER
 &kp COMMA  &kp N0        &kp DOT  &trans  &trans                    &trans  &trans                                                                                   &trans
-            >;
-        };
-
-        colemak {
-            label = "colemak";
-            bindings = <
-&kp TAB                   &kp Q     &kp W          &kp F         &kp P        &kp B                     &kp J                  &kp L  &kp U      &kp Y    &kp LS(COLON)        &minus_plus_tap
-&hold_preferred 6 ESCAPE  &kp A     &kp R          &kp S         &kp T        &kp G                     &kp M                  &kp N  &kp E      &kp I    &hold_preferred 6 O  &apo_quote_tap
-&kp LEFT_SHIFT            &kp Z     &x_equals_tap  &kp C         &kp D        &kp V                     &kp K                  &kp H  &kp COMMA  &kp DOT  &lt 5 SLASH          &kp UNDER
-&kp LEFT_CONTROL          &alt_tap  &gui_tap       &lt 2 ESCAPE  &lt 1 SPACE             &kp BACKSPACE  &mt RIGHT_SHIFT ENTER                                                  &tog 10
             >;
         };
     };
