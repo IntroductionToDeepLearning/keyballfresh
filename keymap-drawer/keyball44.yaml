@@ -13,7 +13,7 @@ layers:
   - O
   - P
   - '&minus_plus_tap'
-  - {t: '$$mdi:keyboard-esc$$', h: SNIPE}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - A
   - S
   - D
@@ -92,11 +92,11 @@ layers:
   - {t: colemak, h: toggle}
   NAV:
   - $$mdi:keyboard-tab$$
-  - '!'
+  - Sft+Ctl+$$mdi:keyboard-tab$$
   - HOME
   - $$mdi:arrow-up-bold$$
   - END
-  - $$mdi:mouse-scroll-wheel$$
+  - Ctl+$$mdi:keyboard-tab$$
   - '*'
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
@@ -109,18 +109,18 @@ layers:
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
   - $$mdi:mouse-left-click-outline$$
-  - ^
+  - {t: '0', s: )}
   - (
   - )
   - '&'
-  - ':'
+  - $
   - '&apo_quote_tap'
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:backspace-reverse-outline$$
-  - {t: '=', s: +}
+  - '&mkp MB4'
   - PG UP
+  - $$mdi:mouse-scroll-wheel$$
   - PG DN
-  - '~'
+  - '&mkp MB5'
   - <
   - '{'
   - '}'
@@ -132,7 +132,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: 'Alt+$$mdi:backspace$$', type: backspace}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:transfer$$', type: trans}
   Num:
@@ -283,7 +283,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
@@ -293,7 +293,7 @@ layers:
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:mouse-right-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:backspace-reverse-outline$$
