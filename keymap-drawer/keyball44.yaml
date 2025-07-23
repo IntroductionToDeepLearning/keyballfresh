@@ -38,8 +38,8 @@ layers:
   - {t: /, h: SCROLL, s: '?'}
   - _
   - $$mdi:apple-keyboard-control$$
-  - '&alt_tap'
-  - '&gui_tap'
+  - '&mega_alt'
+  - '&mega_gui'
   - {t: '$$mdi:keyboard-esc$$', h: Num}
   - {t: '$$mdi:keyboard-space$$', h: NAV}
   - {t: '$$mdi:backspace$$', type: backspace}
@@ -318,10 +318,10 @@ layers:
   NUMgui:
   - $$mdi:keyboard-tab$$
   - {t: /, s: '?'}
-  - {t: Gui+7, s: Gui+&}
-  - {t: Gui+8, s: Gui+*}
-  - {t: Gui+9, s: Gui+(}
-  - '*'
+  - Gui+W
+  - Gui+E
+  - Gui+R
+  - Gui+T
   - '*'
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
@@ -341,13 +341,58 @@ layers:
   - {t: Gui+0, s: Gui+)}
   - J
   - J
-  - Gui+0
-  - {t: Gui+1, s: Gui+!}
-  - {t: Gui+2, s: Gui+@}
-  - {t: Gui+3, s: Gui+#}
-  - {t: '=', s: +}
+  - {t: Z, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: X, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: C, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: V, h: '$$mdi:apple-keyboard-command$$'}
+  - Gui+B
   - <
   - '{'
+  - '}'
+  - '>'
+  - '?'
+  - _
+  - {t: ',', s: <}
+  - {t: Gui+0, s: Gui+)}
+  - {t: ., s: '>'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  shiftgui:
+  - $$mdi:keyboard-tab$$
+  - Sft+Gui+Q
+  - Gui+Sft+W
+  - Gui+E
+  - Gui+R
+  - Gui+T
+  - Sft+Gui+Y
+  - Sft+Gui+U
+  - Gui+Sft+I
+  - Sft+Gui+O
+  - Sft+Gui+P
+  - '&minus_plus_tap'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - Gui+Sft+A
+  - Gui+Sft+S
+  - Gui+Sft+D
+  - Gui+Sft+F
+  - Gui+Sft+G
+  - Gui+Sft+H
+  - Gui+Sft+J
+  - Gui+Sft+K
+  - Gui+Sft+L
+  - {t: Gui+Sft+0, s: Gui+Sft+)}
+  - J
+  - J
+  - Gui+Sft+Z
+  - Gui+Sft+X
+  - Gui+Sft+C
+  - Gui+Sft+V
+  - Gui+Sft+B
+  - Sft+Gui+N
+  - Sft+Gui+M
   - '}'
   - '>'
   - '?'
@@ -399,6 +444,51 @@ layers:
   - _
   - {t: ',', s: <}
   - {t: Alt+0, s: Alt+)}
+  - {t: ., s: '>'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  altshift:
+  - $$mdi:keyboard-tab$$
+  - Sft+Alt+Q
+  - Sft+Alt+W
+  - Gui+E
+  - Gui+R
+  - Gui+T
+  - Sft+Gui+Y
+  - Sft+Gui+U
+  - Gui+Sft+I
+  - Sft+Gui+O
+  - Sft+Gui+P
+  - '&minus_plus_tap'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - Sft+Alt+1
+  - Sft+Alt+2
+  - Sft+Alt+3
+  - Sft+Alt+4
+  - {t: Sft+Alt+5, s: Sft+Alt+%}
+  - Sft+Alt+6
+  - {t: Sft+Alt+7, s: Sft+Alt+&}
+  - {t: Sft+Alt+8, s: Sft+Alt+*}
+  - {t: Sft+Alt+9, s: Sft+Alt+(}
+  - {t: Sft+Alt+0, s: Sft+Alt+)}
+  - J
+  - J
+  - Gui+Sft+Z
+  - Gui+Sft+X
+  - Gui+Sft+C
+  - Gui+Sft+V
+  - Gui+Sft+B
+  - Sft+Gui+N
+  - Sft+Gui+M
+  - '}'
+  - '>'
+  - '?'
+  - _
+  - {t: ',', s: <}
+  - {t: Gui+0, s: Gui+)}
   - {t: ., s: '>'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
