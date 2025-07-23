@@ -84,7 +84,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "ALT_TAP";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT>, <&sl 8>;
+            bindings = <&kp LEFT_ALT>, <&sl 9>;
 
             tapping-term-ms = <250>;
         };
@@ -107,6 +107,36 @@
             tapping-term-ms = <150>;
             require-prior-idle-ms = <50>;
             flavor = "balanced";
+        };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-key-repeat";
+            label = "NEW_BEHAVIOR";
+            #binding-cells = <0>;
+            usage-pages = a;
+        };
+
+        Hold_key_sticky_layer: Hold_key_sticky_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_KEY_STICKY_LAYER";
+            bindings = <&kp>, <&sl>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+        };
+
+        mega_gui: mega_gui {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MEGA_GUI";
+            #binding-cells = <0>;
+            bindings = <&Hold_key_sticky_layer LEFT_GUI 7>, <&sl 8>;
+        };
+
+        mega_alt: mega_alt {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MEGA_ALT";
+            #binding-cells = <0>;
+            bindings = <&Hold_key_sticky_layer LEFT_ALT 7>, <&sl 10>;
         };
     };
 
@@ -162,10 +192,10 @@
         default_layer {
             label = "QWERTY";
             bindings = <
-&kp TAB                   &kp Q     &kp W          &kp E                     &kp R        &kp T                     &kp Y                  &kp U  &kp I      &kp O    &kp P                    &minus_plus_tap
-&hold_preferred 6 ESCAPE  &kp A     &kp S          &kp D                     &kp F        &kp G                     &kp H                  &kp J  &kp K      &kp L    &hold_preferred 6 COLON  &apo_quote_tap
-&kp LEFT_SHIFT            &kp Z     &x_equals_tap  &kp C                     &kp V        &kp B                     &kp N                  &kp M  &kp COMMA  &kp DOT  &lt 5 SLASH              &kp UNDER
-&kp LEFT_CONTROL          &alt_tap  &gui_tap       &hold_preferred 3 ESCAPE  &lt 2 SPACE             &kp BACKSPACE  &mt RIGHT_SHIFT ENTER                                                      &tog 1
+&kp TAB                   &kp Q      &kp W          &kp E                     &kp R        &kp T                     &kp Y                  &kp U  &kp I      &kp O    &kp P                    &minus_plus_tap
+&hold_preferred 6 ESCAPE  &kp A      &kp S          &kp D                     &kp F        &kp G                     &kp H                  &kp J  &kp K      &kp L    &hold_preferred 6 COLON  &apo_quote_tap
+&kp LEFT_SHIFT            &kp Z      &x_equals_tap  &kp C                     &kp V        &kp B                     &kp N                  &kp M  &kp COMMA  &kp DOT  &lt 5 SLASH              &kp UNDER
+&kp LEFT_CONTROL          &mega_alt  &mega_gui      &hold_preferred 3 ESCAPE  &lt 2 SPACE             &kp BACKSPACE  &mt RIGHT_SHIFT ENTER                                                      &tog 1
             >;
         };
 
@@ -232,10 +262,20 @@
         numgui {
             label = "NUMgui";
             bindings = <
-&kp TAB    &kp SLASH         &kp LG(N7)  &kp LG(N8)  &kp LG(N9)  &kp ASTERISK              &kp ASTERISK   &kp LBKT        &kp RBKT         &kp NUMBER_9      &kp NUMBER_0  &minus_plus_tap
-&trans     &kp LG(N1)        &kp LG(N2)  &kp LG(N3)  &kp LG(N4)  &kp LG(N5)                &kp LG(N6)     &kp LG(N7)      &kp LG(N8)       &kp LG(N9)        &kp LG(N0)    &kp J
-&kp J      &kp LG(NUMBER_0)  &kp LG(N1)  &kp LG(N2)  &kp LG(N3)  &kp EQUAL                 &kp LESS_THAN  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp GREATER_THAN  &kp QMARK     &kp UNDER
-&kp COMMA  &kp LG(N0)        &kp DOT     &trans      &trans                        &trans  &trans                                                                          &trans
+&kp TAB    &kp SLASH   &kp LG(W)   &kp LG(E)   &kp LG(R)   &kp LG(T)               &kp ASTERISK   &kp LBKT        &kp RBKT         &kp NUMBER_9      &kp NUMBER_0  &minus_plus_tap
+&trans     &kp LG(N1)  &kp LG(N2)  &kp LG(N3)  &kp LG(N4)  &kp LG(N5)              &kp LG(N6)     &kp LG(N7)      &kp LG(N8)       &kp LG(N9)        &kp LG(N0)    &kp J
+&kp J      &kp LG(Z)   &kp LG(X)   &kp LG(C)   &kp LG(V)   &kp LG(B)               &kp LESS_THAN  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp GREATER_THAN  &kp QMARK     &kp UNDER
+&kp COMMA  &kp LG(N0)  &kp DOT     &trans      &trans                      &trans  &trans                                                                          &trans
+            >;
+        };
+
+        shiftgui {
+            label = "shiftgui";
+            bindings = <
+&kp TAB    &kp LS(LG(Q))  &kp LG(LS(W))  &kp LG(E)      &kp LG(R)      &kp LG(T)                  &kp LS(LG(Y))  &kp LS(LG(U))  &kp LG(LS(I))    &kp LS(LG(O))     &kp LS(LG(P))   &minus_plus_tap
+&trans     &kp LG(LS(A))  &kp LG(LS(S))  &kp LG(LS(D))  &kp LG(LS(F))  &kp LG(LS(G))              &kp LG(LS(H))  &kp LG(LS(J))  &kp LG(LS(K))    &kp LG(LS(L))     &kp LG(LS(N0))  &kp J
+&kp J      &kp LG(LS(Z))  &kp LG(LS(X))  &kp LG(LS(C))  &kp LG(LS(V))  &kp LG(LS(B))              &kp LS(LG(N))  &kp LS(LG(M))  &kp RIGHT_BRACE  &kp GREATER_THAN  &kp QMARK       &kp UNDER
+&kp COMMA  &kp LG(N0)     &kp DOT        &trans         &trans                            &trans  &trans                                                                           &trans
             >;
         };
 
@@ -246,6 +286,16 @@
 &trans     &kp LA(N1)        &kp LA(N2)  &kp LA(N3)  &kp LA(N4)  &kp LA(N5)                &kp LA(N6)     &kp LA(N7)      &kp LA(N8)       &kp LA(N9)        &kp LA(N0)    &apo_quote_tap
 &trans     &kp LA(NUMBER_0)  &kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &kp EQUAL                 &kp LESS_THAN  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp GREATER_THAN  &kp QMARK     &kp UNDER
 &kp COMMA  &kp LA(N0)        &kp DOT     &trans      &trans                        &trans  &trans                                                                          &trans
+            >;
+        };
+
+        altshift {
+            label = "altshift";
+            bindings = <
+&kp TAB    &kp LS(LA(Q))         &kp LS(LA(W))         &kp LG(E)             &kp LG(R)             &kp LG(T)                   &kp LS(LG(Y))         &kp LS(LG(U))   &kp LG(LS(I))    &kp LS(LG(O))     &kp LS(LG(P))   &minus_plus_tap
+&trans     &kp LS(LA(NUMBER_1))  &kp LS(LA(NUMBER_2))  &kp LS(LA(NUMBER_3))  &kp LS(LA(NUMBER_4))  &kp LS(LA(N5))              &kp LS(LA(NUMBER_6))  &kp LS(LA(N7))  &kp LS(LA(N8))   &kp LS(LA(N9))    &kp LS(LA(N0))  &kp J
+&kp J      &kp LG(LS(Z))         &kp LG(LS(X))         &kp LG(LS(C))         &kp LG(LS(V))         &kp LG(LS(B))               &kp LS(LG(N))         &kp LS(LG(M))   &kp RIGHT_BRACE  &kp GREATER_THAN  &kp QMARK       &kp UNDER
+&kp COMMA  &kp LG(N0)            &kp DOT               &trans                &trans                                    &trans  &trans                                                                                   &trans
             >;
         };
 
