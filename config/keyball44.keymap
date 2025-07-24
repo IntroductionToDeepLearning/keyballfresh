@@ -109,13 +109,6 @@
             flavor = "balanced";
         };
 
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-key-repeat";
-            label = "NEW_BEHAVIOR";
-            #binding-cells = <0>;
-            usage-pages = a;
-        };
-
         Hold_key_sticky_layer: Hold_key_sticky_layer {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_KEY_STICKY_LAYER";
@@ -123,20 +116,6 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-        };
-
-        mega_gui: mega_gui {
-            compatible = "zmk,behavior-tap-dance";
-            label = "MEGA_GUI";
-            #binding-cells = <0>;
-            bindings = <&Hold_key_sticky_layer LEFT_GUI 7>, <&sl 8>;
-        };
-
-        mega_alt: mega_alt {
-            compatible = "zmk,behavior-tap-dance";
-            label = "MEGA_ALT";
-            #binding-cells = <0>;
-            bindings = <&Hold_key_sticky_layer LEFT_ALT 7>, <&sl 10>;
         };
 
         Hold_or_tap_layer: Hold_or_tap_layer {
@@ -241,10 +220,10 @@
         function_layer {
             label = "FUN";
             bindings = <
-&none   &kp BSPC  &kp C_REWIND  &kp C_VOL_UP  &kp C_FAST_FORWARD  &kp F10              &none  &none  &none  &none  &none  &none
-&trans  &kp BSPC  &kp K_PREV    &kp C_VOL_DN  &kp K_NEXT          &kp F11              &none  &none  &none  &none  &none  &none
-&none   &kp BSPC  &kp F1        &kp F2        &kp C_STOP          &kp F12              &none  &none  &none  &none  &none  &none
-&trans  &trans    &trans        &trans        &trans                           &trans  &mo 4                              &trans
+&none   &kp BSPC  &kp C_REWIND  &kp C_VOL_UP  &kp C_FAST_FORWARD  &kp F10              &kp ESC    &kp F1  &kp F2   &kp F3   &kp F4   &none
+&trans  &kp BSPC  &kp K_PREV    &kp C_VOL_DN  &kp K_NEXT          &kp F11              &kp GRAVE  &kp F5  &kp F6   &kp F7   &kp F8   &none
+&none   &kp BSPC  &kp F1        &kp F2        &kp C_STOP          &kp F12              &none      &kp F9  &kp F10  &kp F11  &kp F12  &none
+&trans  &trans    &trans        &trans        &trans                           &trans  &mo 4                                         &trans
             >;
         };
 
