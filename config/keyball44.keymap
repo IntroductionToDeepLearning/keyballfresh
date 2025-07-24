@@ -147,7 +147,7 @@
 
         esc {
             bindings = <&kp ESCAPE>;
-            key-positions = <15 16>;
+            key-positions = <15 16 14>;
             timeout-ms = <150>;
             require-prior-idle-ms = <50>;
         };
@@ -160,11 +160,6 @@
         wa {
             bindings = <&kp LG(LS(P))>;
             key-positions = <9 10 11>;
-        };
-
-        scroll_l {
-            bindings = <&mo 5>;
-            key-positions = <16 14 15>;
         };
 
         caps {
