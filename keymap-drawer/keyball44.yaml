@@ -240,9 +240,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
-  - {type: held alternate}
-  - {type: held alternate}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:mouse-left-click-outline$$', type: held alternate}
@@ -590,14 +590,12 @@ combos:
   k: {t: ;, s: ':'}
 - p: [19, 20, 21]
   k: SCROLL
-- p: [15, 16]
+- p: [15, 16, 14]
   k: $$mdi:keyboard-esc$$
 - p: [27, 29, 28]
   k: {t: FUN, h: toggle}
 - p: [9, 10, 11]
   k: Gui+Sft+P
-- p: [16, 14, 15]
-  k: SCROLL
 - p: [7, 8, 9]
   k: $$mdi:apple-keyboard-caps$$
 - p: [0, 1]
