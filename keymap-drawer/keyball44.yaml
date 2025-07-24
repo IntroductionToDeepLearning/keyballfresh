@@ -38,9 +38,9 @@ layers:
   - {t: /, h: SCROLL, s: '?'}
   - _
   - $$mdi:apple-keyboard-control$$
-  - '&mega_alt'
-  - '&mega_gui'
-  - {t: '$$mdi:keyboard-esc$$', h: Num}
+  - '&alt_tap'
+  - '&gui_tap'
+  - {t: Num, h: Num}
   - {t: '$$mdi:keyboard-space$$', h: NAV}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
