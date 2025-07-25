@@ -136,7 +136,7 @@ layers:
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:transfer$$', type: trans}
   Num:
-  - $$mdi:keyboard-tab$$
+  - {t: '`', s: '~'}
   - '!'
   - '@'
   - '#'
@@ -159,17 +159,17 @@ layers:
   - {t: '8', s: '*'}
   - {t: '9', s: (}
   - {t: '0', s: )}
-  - '&apo_quote_tap'
+  - '"'
   - {t: '$$mdi:transfer$$', type: trans}
   - +
   - {t: '=', s: +}
-  - {t: \, s: '|'}
-  - {t: '`', s: '~'}
-  - '~'
+  - '&backslash_pipe_tap'
   - <
+  - '>'
+  - '~'
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
-  - '>'
+  - '&'
   - '?'
   - _
   - {t: '$$mdi:transfer$$', type: trans}
