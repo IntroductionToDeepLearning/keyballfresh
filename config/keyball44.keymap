@@ -130,6 +130,15 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
         };
+
+        backslash_pipe_tap: backslash_pipe_tap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BACKSLASH_PIPE_TAP";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSLASH>, <&kp PIPE>;
+
+            tapping-term-ms = <225>;
+        };
     };
 
     combos {
@@ -209,10 +218,10 @@
         num_homerow {
             label = "Num";
             bindings = <
-&kp TAB  &kp EXCL  &kp AT     &kp HASH       &kp DOLLAR  &kp PERCENT                     &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE    &kp RIGHT_BRACE  &minus_plus_tap
-&mo 4    &kp N1    &kp N2     &kp N3         &kp N4      &kp N5                          &kp N6         &kp N7                &kp N8                 &kp N9            &kp N0           &apo_quote_tap
-&trans   &kp PLUS  &kp EQUAL  &kp BACKSLASH  &kp GRAVE   &kp TILDE                       &kp LESS_THAN  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GREATER_THAN  &kp QMARK        &kp UNDER
-&trans   &trans    &trans     &trans         &trans                       &kp BACKSPACE  &kp SPACE                                                                                      &trans
+&kp GRAVE  &kp EXCL  &kp AT     &kp HASH             &kp DOLLAR     &kp PERCENT                          &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE  &kp RIGHT_BRACE  &minus_plus_tap
+&mo 4      &kp N1    &kp N2     &kp N3               &kp N4         &kp N5                               &kp N6        &kp N7                &kp N8                 &kp N9          &kp N0           &kp DOUBLE_QUOTES
+&trans     &kp PLUS  &kp EQUAL  &backslash_pipe_tap  &kp LESS_THAN  &kp GREATER_THAN                     &kp TILDE     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AMPS        &kp QMARK        &kp UNDER
+&trans     &trans    &trans     &trans               &trans                               &kp BACKSPACE  &kp SPACE                                                                                   &trans
             >;
         };
 
