@@ -14,15 +14,15 @@ layers:
   - P
   - '&minus_plus_tap'
   - {t: '$$mdi:keyboard-esc$$', h: SNIPE}
-  - {t: '$$mdi:apple-keyboard-control$$', h: A}
-  - {t: '$$mdi:apple-keyboard-option$$', h: S}
-  - {t: '$$mdi:apple-keyboard-command$$', h: D}
-  - {t: '$$mdi:apple-keyboard-shift$$', h: F}
+  - {t: A, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: S, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: D, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
   - G
-  - {t: '$$mdi:apple-keyboard-control$$', h: H}
-  - {t: '$$mdi:apple-keyboard-shift$$', h: J}
-  - {t: RIGHT GUI, h: K}
-  - {t: '$$mdi:apple-keyboard-option$$', h: L}
+  - {t: H, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: K, h: RIGHT GUI}
+  - {t: L, h: '$$mdi:apple-keyboard-option$$'}
   - {t: ':', h: SNIPE}
   - '&apo_quote_tap'
   - $$mdi:apple-keyboard-shift$$
