@@ -268,10 +268,10 @@
         default_layer {
             label = "QWERTY";
             bindings = <
-&kp TAB                   &kp Q          &kp W             &kp E                   &kp R                     &kp T                     &kp Y                  &kp U                      &kp I              &kp O              &kp P                    &minus_plus_tap
-&hold_preferred 6 ESCAPE  &hm_l A LCTRL  &hm_l S LEFT_ALT  &hm_l D LEFT_GUI        &hm_shift_l F LEFT_SHIFT  &kp G                     &hm_r H RCTRL          &hm_shift_r J RIGHT_SHIFT  &hm_r K RIGHT_GUI  &hm_r L RIGHT_ALT  &hold_preferred 6 COLON  &apo_quote_tap
-&kp LEFT_SHIFT            &kp Z          &x_equals_tap     &kp C                   &kp V                     &kp B                     &kp N                  &kp M                      &kp COMMA          &kp DOT            &lt 5 SLASH              &kp UNDER
-&kp LEFT_CONTROL          &alt_tap       &gui_tap          &Hold_or_tap_layer 3 3  &lt 2 SPACE                          &kp BACKSPACE  &mt RIGHT_SHIFT ENTER                                                                                            &tog 1
+&kp TAB                   &kp Q                 &kp W             &kp E                   &kp R                     &kp T                     &kp Y                  &kp U                      &kp I              &kp O              &kp P                    &minus_plus_tap
+&hold_preferred 6 ESCAPE  &hm_l LEFT_CONTROL A  &hm_l LEFT_ALT S  &hm_l LEFT_GUI D        &hm_shift_l LEFT_SHIFT F  &kp G                     &hm_r RCTRL H          &hm_shift_r RIGHT_SHIFT J  &hm_r RIGHT_GUI K  &hm_r RIGHT_ALT L  &hold_preferred 6 COLON  &apo_quote_tap
+&kp LEFT_SHIFT            &kp Z                 &x_equals_tap     &kp C                   &kp V                     &kp B                     &kp N                  &kp M                      &kp COMMA          &kp DOT            &lt 5 SLASH              &kp UNDER
+&kp LEFT_CONTROL          &alt_tap              &gui_tap          &Hold_or_tap_layer 3 3  &lt 2 SPACE                          &kp BACKSPACE  &mt RIGHT_SHIFT ENTER                                                                                            &tog 1
             >;
         };
 
