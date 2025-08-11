@@ -146,11 +146,10 @@
             bindings = <&kp>,  <&kp>;
 
             flavor = "balanced";
-            tapping-term-ms = <HM_TAPPING_TERM>;
+            tapping-term-ms = <175>; // Use to be HM_TAPPING_TERM
             quick-tap-ms = <175>;                // repeat on tap-into-hold
-            require-prior-idle-ms = <HM_PRIOR_IDLE>;
+            require-prior-idle-ms = <100>; // Used to be HM_PRIOR_IDLE
 
-            hold-trigger-key-positions = <KEYS_R KEYS_T>;
             hold-trigger-on-release;
         };
 
@@ -160,11 +159,10 @@
             bindings = <&kp>, <&kp>;
 
             flavor = "balanced";
-            tapping-term-ms = <HM_TAPPING_TERM>;
+            tapping-term-ms = <175>;
             quick-tap-ms = <175>;
-            require-prior-idle-ms = <HM_PRIOR_IDLE>;
+            require-prior-idle-ms = <100>;
 
-            hold-trigger-key-positions = <KEYS_L KEYS_T>;
             hold-trigger-on-release;
         };
 
@@ -178,11 +176,10 @@
             bindings = <&kp>, <&kp>;
 
             flavor = "balanced";
-            tapping-term-ms = <HM_TAPPING_TERM_FAST>;
+            tapping-term-ms = <175>;
             quick-tap-ms = <175>;
-            require-prior-idle-ms = <HM_PRIOR_IDLE>;
+            require-prior-idle-ms = <100>;
 
-            hold-trigger-key-positions = <KEYS_R KEYS_T>;
             // hold-trigger-on-release;
         };
 
@@ -192,11 +189,10 @@
             bindings = <&kp>, <&kp>;
 
             flavor = "balanced";
-            tapping-term-ms = <HM_TAPPING_TERM_FAST>;
+            tapping-term-ms = <175>;
             quick-tap-ms = <175>;
-            require-prior-idle-ms = <HM_PRIOR_IDLE>;
+            require-prior-idle-ms = <100>;
 
-            hold-trigger-key-positions = <KEYS_L KEYS_T>;
             // hold-trigger-on-release;
         };
 
@@ -215,7 +211,7 @@
             bindings = <&kp>, <&kp>;
 
             flavor = "balanced";
-            tapping-term-ms = <HM_TAPPING_TERM>;
+            tapping-term-ms = <175>;
             quick-tap-ms = <200>;
         };
     };
