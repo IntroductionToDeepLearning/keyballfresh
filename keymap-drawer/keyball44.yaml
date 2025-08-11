@@ -14,15 +14,15 @@ layers:
   - P
   - '&minus_plus_tap'
   - {t: '$$mdi:keyboard-esc$$', h: SNIPE}
-  - A
-  - S
-  - D
-  - F
+  - {t: '$$mdi:apple-keyboard-control$$', h: A}
+  - {t: '$$mdi:apple-keyboard-option$$', h: S}
+  - {t: '$$mdi:apple-keyboard-command$$', h: D}
+  - {t: '$$mdi:apple-keyboard-shift$$', h: F}
   - G
-  - H
-  - J
-  - K
-  - L
+  - {t: '$$mdi:apple-keyboard-control$$', h: H}
+  - {t: '$$mdi:apple-keyboard-shift$$', h: J}
+  - {t: RIGHT GUI, h: K}
+  - {t: '$$mdi:apple-keyboard-option$$', h: L}
   - {t: ':', h: SNIPE}
   - '&apo_quote_tap'
   - $$mdi:apple-keyboard-shift$$
@@ -119,7 +119,7 @@ layers:
   - '&mkp MB4'
   - PG UP
   - $$mdi:mouse-scroll-wheel$$
-  - PG DN
+  - '&mkp MB4'
   - '&mkp MB5'
   - <
   - '{'
@@ -277,10 +277,10 @@ layers:
   - END
   - Ctl+Sft+$$mdi:keyboard-tab$$
   - Ctl+$$mdi:keyboard-tab$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - Gui+T
   - Ctl+Sft+$$mdi:keyboard-tab$$
   - Ctl+$$mdi:keyboard-tab$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - Gui+W
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
@@ -299,8 +299,8 @@ layers:
   - $$mdi:backspace-reverse-outline$$
   - PgUp
   - PgDn
-  - $$mdi:mouse-scroll-wheel$$
   - '&mkp MB4'
+  - '&mkp MB5'
   - {t: '$$mdi:transfer$$', type: trans}
   - '&mkp MB4'
   - '&mkp MB5'
