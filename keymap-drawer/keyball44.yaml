@@ -431,11 +431,11 @@ layers:
   - {t: Alt+0, s: Alt+), type: held}
   - '&apo_quote_tap'
   - {t: '$$mdi:transfer$$', type: trans}
-  - Alt+0
-  - {t: Alt+1, s: Alt+!}
-  - {t: Alt+2, s: Alt+@}
-  - {t: Alt+3, s: Alt+#}
-  - {t: '=', s: +}
+  - Alt+6
+  - {t: Alt+7, s: Alt+&}
+  - {t: Alt+8, s: Alt+*}
+  - {t: Alt+9, s: Alt+(}
+  - {t: Alt+0, s: Alt+)}
   - <
   - '{'
   - '}'
