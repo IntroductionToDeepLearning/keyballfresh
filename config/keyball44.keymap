@@ -360,7 +360,7 @@
             bindings = <
 &kp TAB    &kp SLASH         &kp LA(N7)  &kp LA(N8)  &kp LA(N9)  &kp ASTERISK              &kp ASTERISK   &kp LBKT        &kp RBKT         &kp NUMBER_9      &kp NUMBER_0  &minus_plus_tap
 &trans     &kp LA(N1)        &kp LA(N2)  &kp LA(N3)  &kp LA(N4)  &kp LA(N5)                &kp LA(N6)     &kp LA(N7)      &kp LA(N8)       &kp LA(N9)        &kp LA(N0)    &apo_quote_tap
-&trans     &kp LA(NUMBER_0)  &kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &kp EQUAL                 &kp LESS_THAN  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp GREATER_THAN  &kp QMARK     &kp UNDER
+&trans     &kp LA(NUMBER_6)  &kp LA(N7)  &kp LA(N8)  &kp LA(N9)  &kp LA(N0)                &kp LESS_THAN  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp GREATER_THAN  &kp QMARK     &kp UNDER
 &kp COMMA  &kp LA(N0)        &kp DOT     &trans      &trans                        &trans  &trans                                                                          &trans
             >;
         };
