@@ -195,9 +195,9 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {type: held}
   - {t: '$$mdi:backspace$$', type: backspace}
-  - PREV
+  - PREVIOUS
   - $$mdi:volume-low$$
-  - NEXT
+  - $$mdi:skip-next$$
   - F11
   - {t: '`', s: '~'}
   - F5
@@ -209,7 +209,7 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - F1
   - F2
-  - STOP
+  - PLAY PAUSE
   - F12
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - F9
@@ -292,7 +292,7 @@ layers:
   - $$mdi:mouse-scroll-wheel$$
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:mouse-right-click-outline$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - NUMalt
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -418,7 +418,7 @@ layers:
   - '9'
   - '0'
   - '&minus_plus_tap'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: Alt+1, s: Alt+!}
   - {t: Alt+2, s: Alt+@}
   - {t: Alt+3, s: Alt+#}
@@ -427,8 +427,8 @@ layers:
   - {t: Alt+6, s: Alt+^}
   - {t: Alt+7, s: Alt+&}
   - {t: Alt+8, s: Alt+*}
-  - {t: Alt+9, s: Alt+(}
-  - {t: Alt+0, s: Alt+)}
+  - {t: Alt+9, s: Alt+(, type: held}
+  - {t: Alt+0, s: Alt+), type: held}
   - '&apo_quote_tap'
   - {t: '$$mdi:transfer$$', type: trans}
   - Alt+0
