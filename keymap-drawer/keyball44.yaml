@@ -104,7 +104,7 @@ layers:
   - '|'
   - {t: '-', s: +}
   - FUN
-  - $$mdi:mouse-right-click-outline$$
+  - $$mdi:apple-keyboard-option$$
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
@@ -113,7 +113,7 @@ layers:
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  - $
+  - $$mdi:apple-keyboard-shift$$
   - '&apo_quote_tap'
   - {t: '$$mdi:transfer$$', type: trans}
   - '&mkp MB4'
