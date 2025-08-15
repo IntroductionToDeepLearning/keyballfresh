@@ -115,7 +115,7 @@ layers:
   - $$mdi:arrow-right-bold$$
   - $$mdi:apple-keyboard-shift$$
   - '&apo_quote_tap'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&vim_add_spaces_around'
   - '&mkp MB4'
   - PG UP
   - $$mdi:mouse-scroll-wheel$$
