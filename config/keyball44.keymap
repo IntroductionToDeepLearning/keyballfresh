@@ -229,6 +229,22 @@
             mods = <(MOD_LSFT)>;
             keep-mods = <(MOD_LSFT)>;
         };
+
+        alt_shift_tap: alt_shift_tap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ALT_SHIFT_TAP";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT>, <&kp LS(LEFT_ALT)>;
+        };
+
+        hold_preferred_kp_kp: hold_preferred_kp_kp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_PREFERRED_KP_KP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+        };
     };
 
     combos {
@@ -278,10 +294,10 @@
         default_layer {
             label = "QWERTY";
             bindings = <
-&kp TAB                   &kp Q                 &kp W             &kp E             &kp R                     &kp T                     &kp Y                  &kp U                      &kp I              &kp O              &kp P                    &minus_shift_plus_morph
-&hold_preferred 6 ESCAPE  &hm_l LEFT_CONTROL A  &hm_l LEFT_ALT S  &hm_l LEFT_GUI D  &hm_shift_l LEFT_SHIFT F  &kp G                     &hm_r RCTRL H          &hm_shift_r RIGHT_SHIFT J  &hm_r RIGHT_GUI K  &hm_r RIGHT_ALT L  &hold_preferred 6 COLON  &apo_quote_tap
-&kp LEFT_SHIFT            &kp Z                 &x_equals_tap     &kp C             &kp V                     &kp B                     &kp N                  &kp M                      &kp COMMA          &kp DOT            &lt 5 SLASH              &kp UNDER
-&kp LEFT_CONTROL          &alt_tap              &gui_tap          &lt 2 SPACE       &hold_preferred 3 TAB                &kp BACKSPACE  &mt RIGHT_SHIFT ENTER                                                                                            &tog 1
+&kp TAB                   &kp Q                 &kp W             &kp E             &kp R                     &kp T                     &kp Y                                    &kp U                      &kp I              &kp O              &kp P                    &minus_shift_plus_morph
+&hold_preferred 6 ESCAPE  &hm_l LEFT_CONTROL A  &hm_l LEFT_ALT S  &hm_l LEFT_GUI D  &hm_shift_l LEFT_SHIFT F  &kp G                     &hm_r RCTRL H                            &hm_shift_r RIGHT_SHIFT J  &hm_r RIGHT_GUI K  &hm_r RIGHT_ALT L  &hold_preferred 6 COLON  &apo_quote_tap
+&kp LEFT_SHIFT            &kp Z                 &x_equals_tap     &kp C             &kp V                     &kp B                     &kp N                                    &kp M                      &kp COMMA          &kp DOT            &lt 5 SLASH              &kp UNDER
+&kp LEFT_CONTROL          &alt_tap              &gui_tap          &lt 2 SPACE       &hold_preferred 3 TAB                &kp BACKSPACE  &hold_preferred_kp_kp RIGHT_SHIFT ENTER                                                                                            &tog 1
             >;
         };
 
@@ -299,7 +315,7 @@
             label = "NAV";
             bindings = <
 &kp TAB  &kp LS(LC(TAB))  &kp HOME   &kp UP          &kp END        &kp LC(TAB)                         &kp ASTERISK   &kp LBKT        &kp UP_ARROW     &kp GRAVE         &kp PIPE         &minus_shift_plus_morph
-&mo 4    &kp LEFT_ALT     &kp LEFT   &kp DOWN_ARROW  &kp RIGHT      &mkp LCLK                           &kp UNDER      &kp LEFT        &kp DOWN         &kp RIGHT         &kp RIGHT_SHIFT  &apo_quote_tap
+&mo 4    &alt_shift_tap   &kp LEFT   &kp DOWN_ARROW  &kp RIGHT      &mkp LCLK                           &kp UNDER      &kp LEFT        &kp DOWN         &kp RIGHT         &kp RIGHT_SHIFT  &apo_quote_tap
 &trans   &mkp MB4         &kp PG_UP  &mkp MCLK       &kp PAGE_DOWN  &mkp MB5                            &kp LESS_THAN  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp GREATER_THAN  &kp QMARK        &kp UNDER
 &trans   &trans           &trans     &trans          &trans                          &kp LA(BACKSPACE)  &kp SPACE                                                                          &trans
             >;
