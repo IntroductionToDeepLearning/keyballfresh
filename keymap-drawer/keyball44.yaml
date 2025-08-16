@@ -600,3 +600,5 @@ combos:
   k: $$mdi:apple-keyboard-caps$$
 - p: [0, 1]
   k: Gui+`
+- p: [25, 26]
+  k: {t: '=', s: +}
