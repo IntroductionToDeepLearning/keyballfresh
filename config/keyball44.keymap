@@ -286,6 +286,11 @@
             bindings = <&kp LG(GRAVE)>;
             key-positions = <0 1>;
         };
+
+        equals {
+            bindings = <&kp EQUAL>;
+            key-positions = <25 26>;
+        };
     };
 
     macros {
