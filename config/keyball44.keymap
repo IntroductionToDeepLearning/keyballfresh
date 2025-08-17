@@ -269,7 +269,7 @@
 
         numlock {
             bindings = <&tog 4>;
-            key-positions = <27 29 28>;
+            key-positions = <>;
         };
 
         wa {
@@ -291,6 +291,11 @@
             bindings = <&kp EQUAL>;
             key-positions = <25 26>;
         };
+
+        spaces_around_insert {
+            bindings = <&none>;
+            key-positions = <28 29>;
+        };
     };
 
     macros {
@@ -299,6 +304,13 @@
             #binding-cells = <0>;
             bindings = <&kp I &kp SPACE &kp RIGHT_ARROW &kp SPACE &kp ESCAPE>;
             label = "ADD_SPACES_AROUND_A_CHARACTER";
+        };
+
+        vim_spaces_around_insert: vim_spaces_around_insert {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT &kp SPACE &kp RIGHT_ARROW &kp SPACE>;
+            label = "VIM_SPACES_AROUND_INSERT";
         };
     };
 
