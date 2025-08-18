@@ -353,10 +353,10 @@
         symbol_nav {
             label = "NAV";
             bindings = <
-&kp TAB                 &kp LS(LC(TAB))  &kp HOME   &kp UP          &kp END        &kp LC(TAB)                     &kp ASTERISK   &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE          &kp RIGHT_BRACE    &backslash_pipe_tap
-&mo 4                   &alt_shift_tap   &kp LEFT   &kp DOWN_ARROW  &kp RIGHT      &mkp LCLK                       &kp AMPS       &hm_r LEFT_SHIFT EQUAL  &hm_r RIGHT_GUI PLUS   &hm_r RIGHT_ALT DOLLAR  &hm_r RCTRL COLON  &kp DOUBLE_QUOTES
-&vim_add_spaces_around  &mkp MB4         &kp PG_UP  &mkp MCLK       &kp PAGE_DOWN  &mkp MB5                        &kp LESS_THAN  &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp GREATER_THAN        &kp QMARK          &kp UNDER
-&trans                  &trans           &trans     &trans          &trans                          &kp BACKSPACE  &kp SPACE                                                                                                &trans
+&kp TAB                 &kp LS(LC(TAB))  &kp HOME   &kp UP          &kp END        &kp LC(TAB)                     &kp ASTERISK   &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE          &kp RIGHT_BRACE   &backslash_pipe_tap
+&mo 4                   &alt_shift_tap   &kp LEFT   &kp DOWN_ARROW  &kp RIGHT      &mkp LCLK                       &kp AMPS       &hm_r LEFT_SHIFT EQUAL  &hm_r RIGHT_GUI PLUS   &hm_r RIGHT_ALT DOLLAR  &hm_r RCTRL SEMI  &kp DOUBLE_QUOTES
+&vim_add_spaces_around  &mkp MB4         &kp PG_UP  &mkp MCLK       &kp PAGE_DOWN  &mkp MB5                        &kp LESS_THAN  &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp GREATER_THAN        &kp QMARK         &kp UNDER
+&trans                  &trans           &trans     &trans          &trans                          &kp BACKSPACE  &kp SPACE                                                                                               &trans
             >;
         };
 
