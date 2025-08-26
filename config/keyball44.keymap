@@ -343,20 +343,20 @@
         colemak {
             label = "colemak";
             bindings = <
-&trans  &kp Q             &kp W          &kp F                 &kp P               &kp B              &kp J          &kp L               &kp U                  &kp Y          &kp LS(COLON)         &minus_shift_plus_morph
-&trans  &hm_l LEFT_ALT A  &hm_l LCTRL R  &hm_l LEFT_COMMAND S  &hm_l LEFT_SHIFT T  &kp G              &hm_r RCTRL M  &hm_r LEFT_SHIFT N  &hm_r RIGHT_COMMAND E  &hm_r RCTRL I  &balanced_modtap 6 O  &apo_quote_tap
-&trans  &kp Z             &x_equals_tap  &kp C                 &kp D               &kp V              &kp K          &kp H               &kp COMMA              &kp DOT        &lt 5 SLASH           &kp UNDER
-&trans  &trans            &trans         &trans                &trans                         &trans  &trans                                                                                         &tog 1
+&trans  &kp Q             &kp W          &kp F                 &kp P               &kp B              &kp J          &kp L               &kp U                  &kp Y          &balanced_modtap 6 COLON  &minus_shift_plus_morph
+&trans  &hm_l LEFT_ALT A  &hm_l LCTRL R  &hm_l LEFT_COMMAND S  &hm_l LEFT_SHIFT T  &kp G              &hm_r RCTRL M  &hm_r LEFT_SHIFT N  &hm_r RIGHT_COMMAND E  &hm_r RCTRL I  &kp O                     &apo_quote_tap
+&trans  &kp Z             &x_equals_tap  &kp C                 &kp D               &kp V              &kp K          &kp H               &kp COMMA              &kp DOT        &lt 6 SLASH               &kp UNDER
+&trans  &trans            &trans         &trans                &trans                         &trans  &trans                                                                                             &tog 1
             >;
         };
 
         symbol_nav {
             label = "NAV";
             bindings = <
-&kp TAB                 &kp LS(LC(TAB))  &kp HOME   &kp UP          &kp END        &kp LC(TAB)                     &kp ASTERISK   &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE          &kp RIGHT_BRACE   &backslash_pipe_tap
-&mo 4                   &alt_shift_tap   &kp LEFT   &kp DOWN_ARROW  &kp RIGHT      &mkp LCLK                       &kp AMPS       &hm_r LEFT_SHIFT EQUAL  &hm_r RIGHT_GUI PLUS   &hm_r RIGHT_ALT DOLLAR  &hm_r RCTRL SEMI  &kp DOUBLE_QUOTES
-&vim_add_spaces_around  &mkp MB4         &kp PG_UP  &mkp MCLK       &kp PAGE_DOWN  &mkp MB5                        &kp LESS_THAN  &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp GREATER_THAN        &kp QMARK         &kp UNDER
-&trans                  &trans           &trans     &trans          &trans                          &kp BACKSPACE  &kp SPACE                                                                                               &trans
+&kp TAB                 &kp LS(LC(TAB))  &kp HOME   &kp UP          &kp END        &kp LC(TAB)                     &kp ASTERISK             &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE          &kp RIGHT_BRACE   &backslash_pipe_tap
+&mo 4                   &alt_shift_tap   &kp LEFT   &kp DOWN_ARROW  &kp RIGHT      &mkp LCLK                       &kp AMPS                 &hm_r LEFT_SHIFT EQUAL  &hm_r RIGHT_GUI PLUS   &hm_r RIGHT_ALT DOLLAR  &hm_r RCTRL SEMI  &kp DOUBLE_QUOTES
+&vim_add_spaces_around  &mkp MB4         &kp PG_UP  &mkp MCLK       &kp PAGE_DOWN  &mkp MB5                        &kp LESS_THAN            &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp GREATER_THAN        &kp QMARK         &kp UNDER
+&trans                  &trans           &trans     &trans          &trans                          &kp BACKSPACE  &hold_preferred 3 SPACE                                                                                           &trans
             >;
         };
 
