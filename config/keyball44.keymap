@@ -343,10 +343,10 @@
         default_layer {
             label = "QWERTY";
             bindings = <
-&kp TAB                   &num_hold NUMBER_1 Q  &num_hold NUMBER_2 W  &num_hold NUMBER_3 E  &num_hold NUMBER_4 R      &num_hold N5 T                     &num_hold NUMBER_6 Y                     &num_hold N7 U             &num_hold N8 I     &num_hold N9 O     &num_hold N0 P           &minus_shift_plus_morph
-&hold_preferred 6 ESCAPE  &hm_l LEFT_ALT A      &hm_l LEFT_CONTROL S  &hm_l LEFT_GUI D      &hm_shift_l LEFT_SHIFT F  &kp G                              &hm_r RCTRL H                            &hm_shift_r RIGHT_SHIFT J  &hm_r RIGHT_GUI K  &hm_r RIGHT_ALT L  &hold_preferred 6 COLON  &apo_quote_tap
-&kp LEFT_SHIFT            &kp Z                 &x_equals_tap         &kp C                 &kp V                     &kp B                              &kp N                                    &kp M                      &kp COMMA          &kp DOT            &lt 5 SLASH              &kp UNDER
-&kp LEFT_CONTROL          &alt_tap              &gui_tap              &lt 2 SPACE           &hold_preferred 3 TAB                         &kp BACKSPACE  &hold_preferred_kp_kp RIGHT_SHIFT ENTER                                                                                            &tog 1
+&kp TAB                   &num_hold NUMBER_1 Q  &num_hold NUMBER_2 W  &num_hold NUMBER_3 E  &num_hold NUMBER_4 R      &num_hold N5 T                     &num_hold NUMBER_6 Y                     &num_hold N7 U             &num_hold N8 I           &num_hold N9 O     &num_hold N0 P           &minus_shift_plus_morph
+&hold_preferred 6 ESCAPE  &hm_l LEFT_ALT A      &hm_l LEFT_CONTROL S  &hm_l LEFT_GUI D      &hm_shift_l LEFT_SHIFT F  &kp G                              &hm_r RCTRL H                            &hm_shift_r RIGHT_SHIFT J  &hm_r RIGHT_GUI K        &hm_r RIGHT_ALT L  &hold_preferred 6 COLON  &apo_quote_tap
+&kp LEFT_SHIFT            &kp Z                 &x_equals_tap         &kp C                 &kp V                     &kp B                              &kp N                                    &kp M                      &hold_preferred 2 COMMA  &kp DOT            &lt 5 SLASH              &kp UNDER
+&kp LEFT_CONTROL          &alt_tap              &gui_tap              &lt 2 SPACE           &hold_preferred 3 TAB                         &kp BACKSPACE  &hold_preferred_kp_kp RIGHT_SHIFT ENTER                                                                                                  &tog 1
             >;
         };
 
