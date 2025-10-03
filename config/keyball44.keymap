@@ -404,8 +404,8 @@
             label = "SNIPE";
             bindings = <
 &kp LG(GRAVE)  &kp LS(LC(TAB))  &kp HOME   &kp UP_ARROW  &kp END    &kp LC(TAB)                         &kp TAB    &kp LC(LS(TAB))  &kp LC(TAB)  &kp LG(W)  &trans  &trans
-&trans         &alt_shift_tap   &kp LEFT   &kp DOWN      &kp RIGHT  &mkp RCLK                           &mkp MCLK  &mkp LCLK        &mkp RCLK    &mo 9      &trans  &trans
-&trans         &kp DELETE       &kp PG_UP  &mkp MB4      &kp PG_DN  &mkp MB5                            &trans     &mkp MB4         &mkp MB5     &trans     &trans  &trans
+&trans         &alt_shift_tap   &kp LEFT   &kp DOWN      &kp RIGHT  &mkp RCLK                           &mkp MCLK  &mkp LCLK        &mo 7        &mo 9      &trans  &trans
+&trans         &kp DELETE       &kp PG_UP  &mkp MB4      &kp PG_DN  &mkp MB5                            &mkp RCLK  &mkp MB4         &mkp MB5     &trans     &trans  &trans
 &trans         &trans           &trans     &trans        &mo 4                       &kp LA(BACKSPACE)  &trans                                                      &trans
             >;
         };
