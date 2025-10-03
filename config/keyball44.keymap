@@ -343,10 +343,10 @@
         default_layer {
             label = "QWERTY";
             bindings = <
-&kp TAB                   &num_hold NUMBER_1 Q  &num_hold NUMBER_2 W  &num_hold NUMBER_3 E  &num_hold NUMBER_4 R      &num_hold N5 T                     &num_hold NUMBER_6 Y                     &num_hold N7 U             &num_hold N8 I           &num_hold N9 O     &num_hold N0 P           &minus_shift_plus_morph
-&hold_preferred 6 ESCAPE  &hm_l LEFT_ALT A      &hm_l LEFT_CONTROL S  &hm_l LEFT_GUI D      &hm_shift_l LEFT_SHIFT F  &kp G                              &hm_r RCTRL H                            &hm_shift_r RIGHT_SHIFT J  &hm_r RIGHT_GUI K        &hm_r RIGHT_ALT L  &hold_preferred 6 COLON  &apo_quote_tap
-&kp LEFT_SHIFT            &kp Z                 &x_equals_tap         &kp C                 &kp V                     &kp B                              &kp N                                    &kp M                      &hold_preferred 2 COMMA  &kp DOT            &lt 5 SLASH              &kp UNDER
-&kp LEFT_CONTROL          &alt_tap              &gui_tap              &lt 2 SPACE           &hold_preferred 3 TAB                         &kp BACKSPACE  &hold_preferred_kp_kp RIGHT_SHIFT ENTER                                                                                                  &tog 1
+&kp TAB                    &num_hold NUMBER_1 Q  &num_hold NUMBER_2 W  &num_hold NUMBER_3 E  &num_hold NUMBER_4 R      &num_hold N5 T                     &num_hold NUMBER_6 Y                     &num_hold N7 U             &num_hold N8 I           &num_hold N9 O     &num_hold N0 P           &minus_shift_plus_morph
+&hold_preferred 13 ESCAPE  &hm_l LEFT_ALT A      &hm_l LEFT_CONTROL S  &hm_l LEFT_GUI D      &hm_shift_l LEFT_SHIFT F  &kp G                              &hm_r RCTRL H                            &hm_shift_r RIGHT_SHIFT J  &hm_r RIGHT_GUI K        &hm_r RIGHT_ALT L  &hold_preferred 6 COLON  &apo_quote_tap
+&kp LEFT_SHIFT             &kp Z                 &x_equals_tap         &kp C                 &kp V                     &kp B                              &kp N                                    &kp M                      &hold_preferred 2 COMMA  &kp DOT            &lt 5 SLASH              &kp UNDER
+&kp LEFT_CONTROL           &alt_tap              &gui_tap              &lt 2 SPACE           &hold_preferred 3 TAB                         &kp BACKSPACE  &hold_preferred_kp_kp RIGHT_SHIFT ENTER                                                                                                  &tog 1
             >;
         };
 
@@ -363,10 +363,10 @@
         symbol_nav {
             label = "NAV";
             bindings = <
-&kp TAB                 &kp LS(LC(TAB))  &kp HOME   &kp UP          &kp END        &kp LC(TAB)                     &kp ASTERISK             &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE          &kp RIGHT_BRACE   &backslash_pipe_tap
-&mo 4                   &alt_shift_tap   &kp LEFT   &kp DOWN_ARROW  &kp RIGHT      &mkp LCLK                       &kp AMPS                 &hm_r LEFT_SHIFT EQUAL  &hm_r RIGHT_GUI PLUS   &hm_r RIGHT_ALT DOLLAR  &hm_r RCTRL SEMI  &kp DOUBLE_QUOTES
-&vim_add_spaces_around  &mkp MB4         &kp PG_UP  &mkp MCLK       &kp PAGE_DOWN  &mkp MB5                        &kp LESS_THAN            &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp GREATER_THAN        &kp QMARK         &kp UNDER
-&trans                  &trans           &trans     &trans          &trans                          &kp BACKSPACE  &hold_preferred 3 SPACE                                                                                           &trans
+&kp TAB                 &kp LS(LC(TAB))  &kp HOME   &kp UP          &kp END        &kp LC(TAB)                       &kp ASTERISK             &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE          &kp RIGHT_BRACE   &backslash_pipe_tap
+&mo 4                   &alt_shift_tap   &kp LEFT   &kp DOWN_ARROW  &kp RIGHT      &kp LS(LG(P))                     &kp AMPS                 &hm_r LEFT_SHIFT EQUAL  &hm_r RIGHT_GUI PLUS   &hm_r RIGHT_ALT DOLLAR  &hm_r RCTRL SEMI  &kp DOUBLE_QUOTES
+&vim_add_spaces_around  &kp DELETE       &kp PG_UP  &mkp MB4        &kp PAGE_DOWN  &mkp MB5                          &kp LESS_THAN            &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp GREATER_THAN        &kp QMARK         &kp UNDER
+&trans                  &trans           &trans     &trans          &trans                            &kp BACKSPACE  &hold_preferred 3 SPACE                                                                                           &trans
             >;
         };
 
@@ -403,10 +403,10 @@
         snipe_layer {
             label = "SNIPE";
             bindings = <
-&kp LG(GRAVE)  &kp HOME    &none        &kp END        &kp LC(LS(TAB))  &kp LC(TAB)                         &kp LG(T)  &kp LC(LS(TAB))  &kp LC(TAB)  &kp LG(W)  &trans  &trans
-&trans         &none       &none        &none          &mkp LCLK        &mkp RCLK                           &mkp MCLK  &mkp LCLK        &mkp RCLK    &mo 9      &trans  &trans
-&trans         &kp DELETE  &kp PAGE_UP  &kp PAGE_DOWN  &mkp MB4         &mkp MB5                            &trans     &mkp MB4         &mkp MB5     &trans     &trans  &trans
-&trans         &trans      &trans       &trans         &mo 4                             &kp LA(BACKSPACE)  &trans                                                      &trans
+&kp LG(GRAVE)  &kp LS(LC(TAB))  &kp HOME   &kp UP_ARROW  &kp END    &kp LC(TAB)                         &kp TAB    &kp LC(LS(TAB))  &kp LC(TAB)  &kp LG(W)  &trans  &trans
+&trans         &alt_shift_tap   &kp LEFT   &kp DOWN      &kp RIGHT  &mkp RCLK                           &mkp MCLK  &mkp LCLK        &mkp RCLK    &mo 9      &trans  &trans
+&trans         &kp DELETE       &kp PG_UP  &mkp MB4      &kp PG_DN  &mkp MB5                            &trans     &mkp MB4         &mkp MB5     &trans     &trans  &trans
+&trans         &trans           &trans     &trans        &mo 4                       &kp LA(BACKSPACE)  &trans                                                      &trans
             >;
         };
 
@@ -467,6 +467,16 @@
 &trans     &kp MINUS     &kp N4   &kp N5  &kp N6  &kp PLUS                  &kp MINUS      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PERCENT       &kp COLON  &apo_quote_tap
 &trans     &kp NUMBER_0  &kp N1   &kp N2  &kp N3  &kp EQUAL                 &kp LESS_THAN  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GREATER_THAN  &kp QMARK  &kp UNDER
 &kp COMMA  &kp N0        &kp DOT  &trans  &trans                    &trans  &trans                                                                                   &trans
+            >;
+        };
+
+        l_snipe {
+            label = "left_snipe";
+            bindings = <
+&kp LG(GRAVE)  &kp HOME    &none        &kp END        &kp LC(LS(TAB))  &kp LC(TAB)                         &kp LG(T)  &kp LC(LS(TAB))  &kp LC(TAB)  &kp LG(W)  &trans  &trans
+&trans         &none       &none        &none          &mkp LCLK        &mkp RCLK                           &mkp MCLK  &mkp LCLK        &mkp RCLK    &mo 9      &trans  &trans
+&trans         &kp DELETE  &kp PAGE_UP  &kp PAGE_DOWN  &mkp MB4         &mkp MB5                            &trans     &mkp MB4         &mkp MB5     &trans     &trans  &trans
+&trans         &trans      &trans       &trans         &mo 4                             &kp LA(BACKSPACE)  &trans                                                      &trans
             >;
         };
     };
